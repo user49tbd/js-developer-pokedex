@@ -1,0 +1,68 @@
+input{
+    color: red;
+    border: none;
+    background: none;
+    font-size: 50px;
+    transition-property: color;
+    transition-duration: 2s;
+}
+input:hover{
+    color: rgba(255,0,255,.5)
+}
+p{
+    background-color: red;
+    margin: 10px;
+    border-radius: 30px;
+    font-size: 30px;
+    padding: 10px;
+    filter: brightness(1.1);
+    color: white;
+}
+h1{
+    color: white;
+    font-size: 50px;
+    padding: 5px;
+}
+img{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+}
+.dicdisplay p{
+    display: inline-block;
+}
+.div-centralizada img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+ img{
+    width: 250px;
+    height: 250px;
+    margin: auto;
+  }
+.statusdiv{
+    background-color: white;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    padding: 10px;
+    border: 20px solid white;
+}
+
+.statusdiv meter{
+    width: 100%;
+}
+table{
+    table-layout: fixed;
+    width: 100%;
+    font-size: 20px;
+}
+b{
+    right:25px;
+    position: absolute;
+    font-size: 50px;
+    color: #000;
+    opacity: .3;
+}
