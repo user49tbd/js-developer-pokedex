@@ -29,7 +29,7 @@ function isrtData(pokM,vl,vi){
 return `
 <div class='${pokM.type}'>
 <h1>
-pokemon
+${pokM.name}
 </h1>
 <b class=".var">#${pokM.number}</b>
 <div class="dicdisplay">
