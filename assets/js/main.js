@@ -59,7 +59,6 @@ function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHtml = pokemons.map(convertPokemonToLi).join('')
         pokemonList.innerHTML += newHtml
-        //console.log(pokemonList.getElementsByTagName("li").length)
         getLI(pokemonList)
     })
 
@@ -82,10 +81,6 @@ if (window.location.pathname === '/C:/Users/Maria/Desktop/GIT-Proj/Pokedex/js-de
 }else{
     const pokemonStatus = document.getElementById('maindiv')
     pokemonStatus.innerHTML += localStorage.getItem("newHtml");
-    console.log("new");
-    //const newHtml = isrtData(pokM)
-    //console.log(pokM.name+" - "+pokM.number+" - "+pokM.type+" - "+pokM.stats)
-    //pokemonList.innerHTML += newHtml
 }
 
 function getLI(pok){
@@ -99,26 +94,19 @@ function getLI(pok){
 
 } 
 function functionChange(tagItem){
-    //console.log("findlinx-----1"+tagItem)
     pokM.name = tagItem;
     let totalpokemon=offset;
     if(offset === 0){
         totalpokemon = limit;
     }
-    //console.log("findlinx-----2")
 
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         pokemons.forEach(pokemonX => {
         if(pokemonX.name == tagItem){
-            //console.log("findlinx-----"+pokemonX.name)
             pokM = pokemonX;
-            console.log(pokM.name+" - "+pokM.number+" - "+pokM.type+" - "+pokM.stats+"-"
-            +pokM.stats[0])
             let w = pokM.stats
-            console.log(w)
             let vl = ["hp","attack","defense","special-attack","special-defense","speed"];
             const newHtml = isrtData(pokM,vl,-1)
-            console.log(newHtml)
             localStorage.setItem("newHtml", newHtml);
             location.replace("deteil.html")
         }})})
