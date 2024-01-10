@@ -104,7 +104,6 @@ function functionChange(tagItem){
         pokemons.forEach(pokemonX => {
         if(pokemonX.name == tagItem){
             pokM = pokemonX;
-            let w = pokM.stats
             let vl = ["hp","attack","defense","special-attack","special-defense","speed"];
             const newHtml = isrtData(pokM,vl,-1)
             localStorage.setItem("newHtml", newHtml);
